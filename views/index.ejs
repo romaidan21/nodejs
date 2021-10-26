@@ -33,7 +33,7 @@
 
 
     <div class="lbl">
-        <h1>Your searched:</h1>
+        <h1>Your searched: <%= data.userQuery %></h1>
         <ul>
             <li>data</li>
             <li>data</li>
@@ -43,24 +43,5 @@
     </div>
 
     <script src="js/example.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script></body>
-    <script>
-        $(document).ready(e=>{
-            $('#form').submit(e=>{
-                e.preventDefault();
-                $.ajax({
-                    url: '/',
-                    type: 'post',
-                    contentType: 'application/json',
-                    data: JSON.stringify($('#form').serializeArray()),
-                    success: (response) =>{
-                        console.log('success got response');
-                        console.log(response);
-                        
-                    }
-                })
-            })
-        })
-    </script>
 
 </html>
